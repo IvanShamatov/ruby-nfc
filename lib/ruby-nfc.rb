@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative './ruby-nfc/reader'
 require_relative './ruby-nfc/tags/mifare/classic'
 require_relative './ruby-nfc/tags/mifare/ultralight'

@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 require 'ffi'
 require 'logger'
 require_relative './libnfc'
 
 module NFC
-  class Error < ::Exception;end
+  class Error < StandardError; end
 
   @@context = nil
   # TODO
-  @@logger = Logger.new(STDERR)
+  @@logger = Logger.new($stderr)
 
   def self.version
     LibNFC.nfc_version
@@ -23,6 +25,6 @@ module NFC
   end
 
   def self.logger
-  	@@logger
+    @@logger
   end
 end
